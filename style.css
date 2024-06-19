@@ -362,3 +362,31 @@ footer{/*bookviewing*/
     padding: 10px;
   }
 }
+/* Add these within the existing media queries */
+
+/* For screens smaller than 768px */
+@media screen and (max-width: 768px) {
+  .listresults {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* For screens smaller than 576px */
+@media screen and (max-width: 576px) {
+  .listresults {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
+
+/* For screens smaller than 400px */
+@media screen and (max-width: 400px) {
+  .listresults {
+    width: 100%;
+    max-width: 100%;
+    box-sizing: border-box;
+  }
+}
