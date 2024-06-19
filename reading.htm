@@ -20,19 +20,45 @@
 </div>
 
 <input type="number" id="page_num_input"  value="1">
-<button onclick="goToPage()">Go</button>
+<button onclick="goToPage()" class="btn">Go</button>
 
 <div id="modeswitch">
     <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARJJREFUSEu1ldsRgkAMRS+daCVqJWolaiVqJWolWoocZ3Gyyz4ZyA/DwOQkN69OC1u3sH+VACtJB0l7SespweQAZ0kn5/Qm6Tgn4CFpaxziHEizxTK4Olmss0v/QkbNFgKImuhDmw3w7qWgsKE9Je2aw5e8LqJbkCdmnzm6KKa9hZEBmTSZrUEJQBZAeFabBaT0t86apbKAsPdTUTZlMgUAGMjd1SRWFzrxJ6UF2NVQrbFzZCF043+1WEBqyFpgw78sxlEGfCx1Ug3MG8pwVaAdxY5Nc41z/vHmJbbschNdgoyGMXUPWjNBb1b6qKNyB2e4ZsPRSUWf3bSlk4lTQHQYz42jvDIz4AVSAyjpnv2+OOALFOIwGfh1e/QAAAAASUVORK5CYII=" id="mode"/>
 </div>
 
 
+
+
+<div style="display: flex;">
+  &nbsp; &nbsp;
+  <p >Page: <span id="page_num"></span> / <span id="page_count"></span></p>
+</div>
+
+<div class="center">
+        <button id="prev" onclick="onPrevPage()" class="btn" >Previous</button>
+        <button id="next" onclick="onNextPage()" class="btn">Next</button>
+    </div>
+
+<div class="center">
+<canvas id="the-canvas"></canvas>
+</div>
+
+<div class="center">
+    <button id="prev" onclick="onPrevPage()" class="btn">Previous</button>
+    <button id="next" onclick="onNextPage()" class="btn">Next</button>
+</div>
+
+<div id="favPopUp" class = favouritepopup>
+<p class =center>Add to favorites</p>
+</div>
+    
+    
 <div class="center">
     <!--favorite books-->
-<button onclick="favour()">add to Favourites</button>
+<button onclick="favour()" class="btn">add to Favourites</button>
 
 <!--save books-->
-<button onclick="saveBooks()">save</button>
+<button onclick="saveBooks()" class="btn">save</button>
 
 
 </div>
@@ -43,31 +69,7 @@
     <a id="backToFav">find new book</a>
 </div>
 
-<div style="display: flex;">
-  &nbsp; &nbsp;
-  <p >Page: <span id="page_num"></span> / <span id="page_count"></span></p>
-</div>
-
-<div class="center">
-        <button id="prev" onclick="onPrevPage()" >Previous</button>
-        <button id="next" onclick="onNextPage()">Next</button>
-    </div>
-
-<div class="center">
-<canvas id="the-canvas"></canvas>
-</div>
-
-<div class="center">
-    <button id="prev" onclick="onPrevPage()" >Previous</button>
-    <button id="next" onclick="onNextPage()">Next</button>
-</div>
-
-<div id="favPopUp" class = favouritepopup>
-<p class =center>Add to favorites</p>
-</div>
-    
-    
-
+<div class="foot"></div>
 
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
 <script src="readingScript.js">
