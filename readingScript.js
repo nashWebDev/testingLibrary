@@ -123,7 +123,7 @@ pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
 });
 
 function handleVolumeButtonPress(event) {
-  if (event.key === "VolumeUp") {
+  if (event.key === "VolumeUp" ) {
     event.preventDefault(); // Prevent default volume change behavior
     alert(`Volume button pressed: ${event.key}`);
     // Add any other functionality you want to trigger here
