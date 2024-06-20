@@ -281,9 +281,15 @@ footer{/*bookviewing*/
   box-sizing: border-box;
   margin-top: auto; /* Pushes the footer to the bottom */
 }
+.foot a:hover{
+  cursor: crosshair;
+}
 
 .contact-info {
   margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   float: right;
   clear: both;
 }
