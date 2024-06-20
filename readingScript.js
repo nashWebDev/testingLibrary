@@ -236,3 +236,6 @@ modswitch.addEventListener("click", function(){
   
 
 })
+// make popup popup in the middle of screen for devices with large screens
+// get more pdfs to test
+//ask someone to review it

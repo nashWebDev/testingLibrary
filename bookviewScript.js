@@ -257,6 +257,8 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
     document.getElementById("main").style.marginLeft = "250px";
     document.getElementById("main").style.opacity="0.5"
+    document.getElementById("main2").style.marginLeft = "250px";
+    document.getElementById("main2").style.opacity="0.5"
     document.getElementById("openbtn").style.display = " none"
    
   }
@@ -268,5 +270,7 @@ function openNav() {
     document.getElementById("mySidenav").style.width = "0";
     document.getElementById("main").style.marginLeft = "0";
     document.getElementById("main").style.opacity="1"
+    document.getElementById("main2").style.marginLeft = "0";
+    document.getElementById("main2").style.opacity="1"
     document.getElementById("openbtn").style.display = " block"
   }

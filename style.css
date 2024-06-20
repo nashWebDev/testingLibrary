@@ -16,6 +16,8 @@ body{
     box-shadow: 0 5px 15px 5px black;
     background-color: rgb(121, 121, 224);
     background-blend-mode: multiply;
+    text-shadow: 0 1px 1px  gold;
+
 }
 
 h1{
@@ -66,12 +68,14 @@ form{
 }
 form h3{
   font-size: 24px;
+  text-shadow: 0 1px 1px  white;
+
 }
 
 form p{
    font-weight: 900;
    font-size: 17px;
-   text-shadow: 0 1px 2px  black;
+   text-shadow: 0 1px 1px  white;
    
 }
 input{
@@ -207,6 +211,15 @@ a:hover ,li:hover{
   padding: 20px;
   padding-bottom: 0%;
   margin-bottom: 0;
+}
+#main2 {
+  transition: margin-left .5s;
+  padding: 20px;
+  padding-bottom: 0%;
+  margin-bottom: 0;
+  position: absolute;
+  bottom: 0%;
+  width: 90%;
 }
 
 /* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
