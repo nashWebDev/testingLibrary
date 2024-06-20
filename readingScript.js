@@ -2,7 +2,8 @@
 console.log("title:"+heading.title)
  
  document.getElementById("title").innerHTML =heading.title;
- 
+
+
  //pdf viewer
  
 // Get access to pdf.js library
@@ -111,7 +112,7 @@ function goToPage() {
 /**
  * Load the PDF document asynchronously.
  */
-var url = 'img/E-Library (3).pdf';  // Replace with your PDF file URL
+var url = 'img\E-Library (3).pdf' ;  // Replace with your PDF file URL
 pdfjsLib.getDocument(url).promise.then(function(pdfDoc_) {
   // Once the PDF is loaded, store the document object
   pdfDoc = pdfDoc_;
