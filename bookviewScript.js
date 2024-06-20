@@ -274,3 +274,10 @@ function openNav() {
     document.getElementById("main2").style.opacity="1"
     document.getElementById("openbtn").style.display = " block"
   }
+//footer to appear at bottom
+function getBodyHeight() {
+    let body = document.body, html = document.documentElement;
+    return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
+  }
+
+  document.getElementById("main2").style.top = (getBodyHeight()/3.5)+"px";
