@@ -51,5 +51,5 @@ function getBodyHeight() {
     return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
   }
 
-  document.getElementById("main2").style.top = (getBodyHeight()/3.5)+"px";
+  document.getElementById("main2").style.top = (getBodyHeight()/5)+"px";
 
