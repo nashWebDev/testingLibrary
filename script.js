@@ -27,7 +27,7 @@ login.addEventListener("submit",function(event){
         localStorage.setItem("name",JSON.stringify(obj))       
         window.location.href = "bookViewing.htm"
     }else{
-        alert("scammer")
+        alert("please enter a valid email, issued to you from bgc")
     
     }
 
