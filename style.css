@@ -295,7 +295,7 @@ footer{/*bookviewing*/
   clear: both;
 }
 .favouritepopup {
-  position: absolute;
+  position: fixed;
   width: 300px; /* Set a fixed width for better control */
   height: auto; /* Adjust the height based on content */
   top: 50%; /* Position it closer to the top */
