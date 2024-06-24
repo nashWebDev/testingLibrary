@@ -103,50 +103,71 @@ var booksArray = [
     "Software Engineering: A Practitioner's Approach", "Microelectronic Circuits"
 ];
 
+document.addEventListener("DOMContentLoaded",function(){
+    for (var i = 0; i < 25; i++) {
+        txtValue = booksArray[i];
+        listArray(txtValue)
+    }
 
+})
+
+function listArray(txtValue) {
+    var catalogueBox = document.getElementById("catalogue");
+
+    var fdiv = document.createElement("div");
+    var div = document.createElement("div");
+    var a = document.createElement("a");
+    a.href = "reading.htm";
+    a.textContent = txtValue;
+
+    fdiv.classList.add("bookbox");
+    div.classList.add("imgContainer");
+
+    div.appendChild(a);
+    fdiv.appendChild(div);
+    catalogueBox.appendChild(fdiv);
+
+    // Add event listener to store title in localStorage when link is clicked
+    a.addEventListener("click", function(event) {
+        event.preventDefault(); // Prevent default link behavior (optional)
+        var title = this.textContent; // Get text content of clicked link
+        var obje = { "title": title };
+        localStorage.setItem("title", JSON.stringify(obje));
+        console.log("Stored title in localStorage: " + title);
+        window.location='reading.htm'
+    });
+}
 
 function search() {
-    
-    var input, filter, ul, i, txtValue;
+    var input, filter, i, txtValue;
     input = document.getElementById("myInput");
     filter = input.value.toUpperCase();
-    ul = document.getElementById("myUL");
-    ul.innerHTML = "";
-    var maxResults = 13; 
-    var resultsCount = 0; 
+    var maxResults = 25;
+    var resultsCount = 0;
+
+    var catalogueBox = document.getElementById("catalogue");
+    catalogueBox.innerHTML = ""; // Clear previous results
 
     for (i = 0; i < booksArray.length; i++) {
         if (resultsCount >= maxResults) {
-            break; 
+            break;
         }
         txtValue = booksArray[i];
         if (txtValue.toUpperCase().indexOf(filter) > -1) {
-            var li = document.createElement("li");
-            var a = document.createElement("a");
-            a.href = "reading.htm";//
-            a.textContent = txtValue;
-            li.appendChild(a);
-            ul.appendChild(li);
-            resultsCount++; 
-
-            a.addEventListener("click" , function(event){
-                title =this.textContent;
-                var obje = {"title":title}
-                localStorage.setItem("title",JSON.stringify(obje))    
-                console.log("title:"+this.title)
-            })
-            
+            listArray(txtValue); // Pass txtValue to listArray function
+            resultsCount++;
         }
     }
 
-
+    // Display message if no results found
+    var messageElement = document.getElementById("re");
     if (resultsCount === 0) {
-        document.getElementById("re").innerHTML = "No results found";
+        messageElement.textContent = "No results found";
     } else {
-        document.getElementById("re").innerHTML = ""; 
+        messageElement.textContent = ""; // Clear message if results are found
     }
-
 }
+
 
 function disUsername(){
 var username = JSON.parse(localStorage.getItem("name"))
@@ -280,4 +301,4 @@ function getBodyHeight() {
     return Math.max( body.scrollHeight, body.offsetHeight, html.clientHeight, html.scrollHeight, html.offsetHeight);
   }
 
-  document.getElementById("main2").style.top = (getBodyHeight()/3.5)+"px";
+  document.getElementById("main2").style.top = (getBodyHeight()/5)+"px";
