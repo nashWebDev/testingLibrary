@@ -2,42 +2,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>E-Library</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Login</title>
+    <link rel="stylesheet" href="loginstyle.css">
+
 </head>
-<body style="background-color: dimgrey;background-image: url(img/library\ books.jfif);">
-    
-<div class="box"><h1>BEREA GROUP COLLEGES</h1></div>
+<body>
+    <header>
+        <nav>
+            <img src="img/berea logo.jfif" alt="logo" class="logo">
+            <h2>BEREA GROUP COLLEGES</h2>
 
-    <div class="loginplacmentClass">
-        <div class="borderbox" id="borderbox">
+            <div class="pages">
+                <a href="#">Search Page</a>
+                <a href="#">Catalogue</a>
+                <a href="https://www.bct.ac.za/"> BGC main website</a>
 
+            </div>
+        </nav>
+    </header>
 
-<form id="log">
-    <div class="center"><H3>E-LIBRARY LOGIN</H3></div>
-<div >
-    <p>USER-NAME</p>
-<input type="text" id="username" onkeypress="addGlow(this)" required>
-</div>
+<div class="mainview">
+    <section id="s1">
+        
 
-<div >
-    <p>EMAIL ADDRESS</p>
-<input type="text" id="email" onkeypress="addGlow(this)" onclick="addGlow(this)" placeholder="name@btc.ac.za" required >
-</div>
+        <div class="loginBox">
 
-<input type="submit">
+            <h3>Login</h3>
 
-</form>
+            <form id="log">
+                <input type="text" placeholder="name" id="name" required><br>
+                <input type="text" placeholder="student number" id="studentId" required><br>
+                <input type="text" placeholder="Email" id="email" required><br>
+
+                <input type="submit" value="submit" onclick="glow()">
+            </form>
 
         </div>
+
+
+    </section>
+
+    <div style="width: 10px;">&nbsp;</div>
+
+    <section id="s2">
+
+        <h1>STUDENT LIBRARY <br> PORTAL</h1>
+        <P>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatibus, eligendi!</P>
+
+    </section>
+
+</div>
+
+<div class="mobile">
+    <div class="loginBox">
+
+        <h3>Login</h3>
+
+        <form id="log2">
+            <input type="text" placeholder="name" id="name2" required><br>
+            <input type="text" placeholder="student number" id="studentId2" required><br>
+            <input type="text" placeholder="Email" id="email2" required><br>
+
+        
+        <input type="submit" value="submit" onclick="glow()">
+        </form>
+
     </div>
 
-<br>
+</div>
 
+    
 
-<div class="foot">
-    <p>&copy; 2024 BGC. All rights reserved.</p>    
-    <p class="contact-info">
+<footer id="foot">
+    <p>&copy; 2024 BGC. All rights reserved.</p>
+
+    <div class="pages" >
         <!--twitter-->
         <a href="https://bereagroup.co.za/courses/#"><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAARJJREFUSEvlldERgjAQRJdOtBK1ErUStRK1ErUS7UR5TM4J4RLIB1/cDIOS3O1ldzkazRzNzPW1XICtpJOkVaD43t7P4f8h/O6WUooeko6SPgVtKHB11skBkPybracA31DcOvJw2JMLQJ6SyOfeOwHo7yjzEjqJT5PrPgbcWfEcRfBrQXEuOjIKPHpsP9RA0T9SiugwFq/2NSkCpBTVFmd/T+ApFNWCrFMHphRxCqxq/q4FGEwGb1Qg8r7tBD1qYkCPRxHPplgxBcZh0DOI3LDjtcdNU6Pn/ZJN4zV0MNuWgFxqLME7gQnMCcZ0yHbuAdQ4iDkzNhQ7DM+muGgTrBrbFSFfznwq6rTcL9pU+87/0f8B2ZYyGenGE+gAAAAASUVORK5CYII="/></a>
         <!--facebook-->
@@ -49,11 +88,10 @@
         <!--linkdein-->
         <a href=""><img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAABgAAAAYCAYAAADgdz34AAAAAXNSR0IArs4c6QAAAOFJREFUSEvtlcEJAkEMRd92oh60De3Es+BBsAAbEETwLFaiZXgQ1EZEI7NLDHGHnXHxoDlmZ/5LfiZsQctRtKyPB+gBN+DyCbgFrIFpEF4C81yIBgyAoxHsANccSAzQzbXKWrQBJqHiFTDLqV7uekPuhyGfcsU9gHiuo3xJdflhsPHgFWQ7OAOlmIjLDCT2gAhJSH4EyFlbzO6RWOhkKsB2pDUFXnWTAoiNRsQF8oxUgBYZA1tF1dYmA+x+vJtdMsB2rh/BizOpFv0B1UJ5i+a9vh+aQWxLG3//yk+/cZV1F+5TgkgZkxvc1AAAAABJRU5ErkJggg=="/></a>
 
+    </div>
 
-    </p>
-</div>
-
+</footer>
 <script src="https://unpkg.com/boxicons@2.1.4/dist/boxicons.js"></script>
-<script src="script.js"></script>
+    <script  src="login.js"></script>
 </body>
 </html>

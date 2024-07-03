@@ -1,0 +1,309 @@
+@font-face {
+    font-family: 'CustomFont';
+    src:url('img/AbhayaLibre-Bold.ttf') format('truetype'); 
+}
+
+:root {
+    --Bereablue: #27348b;
+    --white: #ffffff;
+}
+*{
+    font-family: "CustomFont", sans-serif;
+  }
+body{
+    position: relative;
+    padding: 0;
+    margin: 0;
+    background-image: url(img/DSC_0021-min.jpg);
+    background-attachment: fixed;
+    background-size: cover;
+    image-rendering: optimizeSpeed;
+    overflow-x: hidden;
+}
+
+header {
+    border: 2px solid black;
+    background-color: var(--Bereablue);
+    color: white;
+    display: flex;
+    padding: 5px;
+    z-index: 5;
+    margin: 5px;
+    font-weight: 600;
+    animation: fadeIn 3s 1.5s forwards;
+    transition: opacity 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    margin: 5px;
+    width: 100%;
+}
+
+nav img {
+    border: 2px solid black;
+    clip-path: circle();
+    width: 50px;
+    height: 50px;
+}
+
+.pages {
+    width: 100%;
+}
+
+.pages a {
+    float: right;
+    margin: 5px;
+    padding: 5px;
+    color: var(--white);
+    text-decoration: none;
+    transition: transform 0.5s ease;
+}
+
+.pages a:hover {
+    transform: translateY(-10px);
+    text-decoration: underline;
+}
+.mobile{
+  display: none;
+}
+.mainview {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 5%;
+    gap: 20px;
+}
+
+section {
+    flex: 1;
+    min-width: 300px;
+}
+
+section h1 {
+    font-size: 50px;
+    font-weight: 600;
+}
+
+#s1 {
+    animation: slideInY 3s 1.5s forwards;
+}
+
+#s2 {
+    color: rgb(250, 196, 59);
+    text-shadow: 0 2px 2px black;
+    animation: slideInX 3s 1.5s forwards;
+}
+
+@keyframes slideInY {
+    from {
+        transform: translateY(-50%);
+    }
+    to {
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInX {
+    from {
+        transform: translateX(-50%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+
+.loginBox {
+    border: 2px solid black;
+    box-shadow: 0 2px 2px black;
+    border-radius: 20px;
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    justify-content: center;
+    padding: 5%;
+    margin: auto;
+    width: 50%;
+    transition: 0.1s;
+}
+
+.loginBox form {
+    padding: 10px;
+    margin: 5px;
+}
+
+.loginBox input[type="text"] {
+    padding: 5px;
+    border-radius: 5px;
+    margin: 5px;
+    border: 2px solid black;
+    width: 100%;
+}
+
+.loginBox input[type="submit"] {
+    width: 100%;
+    border: 2px solid black;
+    padding: 10px;
+    cursor: pointer;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 15px;
+    box-shadow: 0 9px #999;
+    transition: 0.5s;
+}
+
+.loginBox input[type="submit"]:hover {
+    box-shadow: 0 9px var(--Bereablue);
+}
+
+.loginBox input[type="submit"]:active {
+    background-color: var(--Bereablue);
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+
+footer {
+    position: absolute;
+    bottom: -100;
+    width: 97%;
+    border: 2px solid black;
+    background-color: var(--Bereablue);
+    color: var(--white);
+    display: flex;
+    padding: 10px;
+    margin: 5px;
+    font-weight: 600;
+    animation: fadeIn 3s 1.5s forwards;
+    transition: opacity 2s;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: var(--bereagray);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--Bereablue);
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--Bereablue);
+}
+
+::-webkit-scrollbar-button {
+    background-color: var(--Bereablue);
+}
+
+@media only screen and (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 10px;
+        margin: 0;
+    }
+
+    nav {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    nav img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .pages {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    .pages a {
+        margin: 10px;
+        padding: 10px;
+        font-size: 1.2em;
+    }
+
+    .mainview {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    section h1 {
+        font-size: 1.5em;
+        text-align: center;
+    }
+
+    .loginBox {
+        width: 100%;
+        padding: 10%;
+        margin: 10px auto;
+    }
+
+    .loginBox input[type="text"],
+    .loginBox input[type="submit"] {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    footer {
+        display: none;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .pages a {
+        display: none;
+    }
+
+    nav img {
+        width: 30px;
+        height: 30px;
+    }
+
+    .mainview{
+      display: none;
+    }
+    .mobile{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      padding: 5px;
+      margin: 0px;
+      
+    }
+    .loginBox{
+      width: 100%;
+    }
+    footer {
+        display: none;
+    }
+}
